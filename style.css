@@ -1,3 +1,193 @@
 body {
   font-family: monospace;
+  background-image:url("bk1.jpg");
+  background-size:100%;
+  padding:0;
+  margin:0;
+  -c-gray-1: #eceff1;
+}
+body::after{
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity : 0.5;
+  z-index: -1;
+  background-color:#313c42;
+}
+h1 {
+  position:absolute;
+  width:100%;
+  color:white;
+  top:70px;
+  text-align:center;
+}
+#chatbox{
+  width:800px;
+  height:500px;
+  position:absolute;
+  top:150px;
+  left:calc(50% - 400px);
+  background-color:white;
+}
+.box{
+  position:absolute;
+  background-color:white;
+
+}
+#left{
+  width:40%;
+  height:100%;
+}
+#search{
+  border-bottom: 1px solid #eceff1;
+  position:absolute;
+  width:80%;
+  left:10%;
+  height:12%;
+  margin:5% 0 0 0;
+}
+#search input{
+  height:70%;
+  width:62%;
+  float: left;
+  
+  background-color:#eceff1;
+  border-radius:35px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border:none;
+  padding:0 20px;
+}
+#search input:focus{
+  outline:none;
+}
+#search a{
+  display: block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #00b0ff;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/name-type.png');
+  background-repeat: no-repeat;
+  background-position: top 12px left 13px;
+  border-radius: 50%;
+}
+.people{
+  position:absolute;
+  top:15%;
+  margin:0;
+  padding:0;
+  width:100%;
+}
+.person{
+  height: 40px;
+  padding: 15px 30px;
+  border-bottom:1px solid #eceff1;
+  list-style-type:none;
+  color: #acadad;
+  cursor:pointer;
+}
+.person img{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+.person .time{
+  position:absolute;
+  right:30px;
+}
+.person .name{
+  font-size: 14px;
+  line-height: 22px;
+  color: black;
+  font-weight:bolder;
+}
+.person .preview{
+  font-size: 13px;
+  display: inline-block;
+  overflow: hidden;
+  width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.person:hover{
+  background-color:#00b0ff;
+  border-color:#00b0ff;
+}
+.person:hover span{
+  color:white;
+}
+.active{
+  background-color:#00b0ff;
+  border-color:#00b0ff;
+}
+.active span,
+.active .name{
+  color:white;
+}
+
+/*right*/
+#right{
+  left:40%;
+  width:60%;
+  height:100%;
+  border-left: 1px solid #eceff1;
+  overflow:hidden;
+}
+#to{
+  position:absolute;
+  background-color:#eceff1;
+  width:100%;
+  height:3%;
+  padding:18px;
+}
+#to span{
+  font-size:14px;
+}
+
+/*對話框*/
+.chat{
+  position:absolute;
+  width:100%;
+  height:calc(97% - 36px);
+  top:calc(36px + 3%);
+}
+.bubble {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  clear: both;
+  margin-bottom: 8px;
+  padding: 13px 14px;
+  vertical-align: top;
+  border-radius: 5px;
+}
+.bubble::before {
+    position: absolute;
+    top: 19px;
+    display: block;
+    width: 8px;
+    height: 6px;
+    content: '\00a0';
+    transform: rotate(29deg) skew(-35deg);
+}
+.you{
+  float: left;
+  color: black;
+  background-color: #eceff1;
+  align-self: flex-start;
+}
+.me{
+  float: left;
+  color: black;
+  background-color: #00b0ff;
+  align-self: flex-start;
 }
